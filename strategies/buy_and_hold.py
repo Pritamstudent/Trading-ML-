@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np
 from joblib import load
+
 # from zipline.api import set_timezone, order_target_percent
 class BuyAndHold:
 

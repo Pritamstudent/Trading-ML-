@@ -6,6 +6,7 @@ from datetime import datetime
 # These are used by the test examples.py to discover the examples to run
 from zipline.utils.calendar_utils import register_calendar, get_calendar
 from strategies.buy_and_hold import BuyAndHold
+from strategies.auto_correlation import AutoCorrelation
 from os import environ
 import pandas as pd
 _cols_to_check = {
@@ -47,6 +48,9 @@ def run_strategy(strategy_name):
     mod = None
     if strategy_name == 'buy_and_hold':
         mod = BuyAndHold()
+
+    elif strategy_name == 'auto_correlation':
+        mod = AutoCorrelation()
 
     # Convert start_date and end_date to UTC
     register_calendar("YAHOO", get_calendar("NYSE"), force = True)
