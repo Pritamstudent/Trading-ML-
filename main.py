@@ -7,10 +7,10 @@ import warnings
 warnings.filterwarnings("ignore")
 from strategies.run_zipline import run_strategy
 def main():
-    print("*** Algorithm trading bots ***")
-    print(" BUY and HOLD strategy ")
-    perf = run_strategy('auto_correlation')
-    perf.to_csv("auto_correlation.csv")
+    print("***  Hands-on Machine Learning for Algorithmic Trading Bots ***")
+    print("*** Implement Scalping Strategy ***")
+    perf = run_strategy("scalping")
+    perf.to_csv("scalping.csv")
 
 if __name__ == '__main__':
 
